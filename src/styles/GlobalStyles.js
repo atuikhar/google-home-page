@@ -1,5 +1,15 @@
-import { createGlobalStyle } from 'styled-components';
-import { normalize } from 'styled-normalize';
+import { createGlobalStyle } from 'styled-components'
+import { normalize } from 'styled-normalize'
+
+export const lightMode = {
+  body: '#fff',
+  fontColor: '#000',
+}
+
+export const darkMode = {
+  body: '#202124',
+  fontColor: '#dedede',
+}
 
 const GlobalStyles = createGlobalStyle`
   ${normalize};
@@ -14,17 +24,12 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
   body {
-    font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
     cursor: default;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  li{
-    list-style: none;
-  }
-`;
+    background-color: ${(props) => props.theme.body};
+    font-family: Arimo , sans-serif;
 
-export default GlobalStyles;
+  }
+`
+
+export default GlobalStyles
