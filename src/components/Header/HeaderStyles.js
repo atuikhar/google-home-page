@@ -23,6 +23,16 @@ export const Text = styled.p`
 export const Link = styled.a`
   padding-left: 10px;
   text-decoration: none;
-  color: ${(props) => props.theme.color};
+  color: #545961;
   }
+`
+
+export const Button = styled.button`
+  border: none;
+  border-radius: 5px;
+  background: #1a73e8;
+  padding: 10px;
+  min-width: 96px;
+  margin-right: 10px;
+  color: #fff;
 `

@@ -1,13 +1,7 @@
 import React from 'react'
-import AccountCircle from '@mui/icons-material/AccountCircle'
 import { GoogleApps } from 'components/GoogleApps/GoogleApps'
-import { Nav, Div, LeftNav, Text, Link } from './HeaderStyles'
+import { Nav, Div, LeftNav, Text, Link, Button } from './HeaderStyles'
 
-const iconStyles = {
-  fontSize: '37px',
-  marginRight: '15px',
-  cursor: 'pointer',
-}
 export const Header = () => {
   return (
     <Nav>
@@ -20,7 +14,9 @@ export const Header = () => {
             <Text>Images</Text>
           </Link>
           <GoogleApps />
-          <AccountCircle style={iconStyles} />
+          <Link href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F%3Fpccc%3D1&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+            <Button>Sign in</Button>
+          </Link>
         </LeftNav>
       </Div>
     </Nav>

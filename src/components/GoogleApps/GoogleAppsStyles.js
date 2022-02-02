@@ -1,3 +1,4 @@
+import { ImageList, ImageListItem } from '@mui/material'
 import styled from 'styled-components'
 
 export const Icon = styled.span`
@@ -7,14 +8,30 @@ export const Icon = styled.span`
   cursor: pointer;
 `
 
-export const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 300px;
+export const GoogleIcons = styled.img`
+  height: 35px;
+  width: 35px;
+  margin: 10px;
+`
+export const ListContainer = styled(ImageList)`
+  width: 350px;
+  height: 400px;
 `
 
-export const GoogleIcons = styled.img`
-  height: 30px;
-  width: 30px;
-  margin: 2px;
+export const AppList = styled(ImageListItem)`
+  text-align: center;
+
+  &:hover {
+    background: rgba(215, 235, 245, 1);
+    border-radius: 10px;
+  }
+`
+export const Link = styled.a`
+  text-decoration: none;
+`
+export const Text = styled.p`
+  font-size: 13px;
+  color: #000;
+  text-align: center;
+  padding-bottom: 10px;
 `

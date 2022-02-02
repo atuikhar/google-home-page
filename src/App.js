@@ -22,7 +22,7 @@ const App = () => {
         <Div>
           <Header />
           <Hero />
-          <Footer />
+          <Footer toggleTheme={toggleTheme} />
         </Div>
       </ThemeProvider>
     </>

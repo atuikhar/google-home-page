@@ -140,7 +140,7 @@ export const products = [
   },
   {
     name: 'Arts and Culture',
-    img: '/images/Art&Culture.svg',
+    img: '/images/arts&culture.png',
     link: 'https://artsandculture.google.com/?hl=en',
   },
   {

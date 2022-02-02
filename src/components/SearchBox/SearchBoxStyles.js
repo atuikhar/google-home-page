@@ -27,6 +27,8 @@ export const Input = styled.input`
   border: none;
   outline: none;
   padding-left: 10px;
+  color: #545961;
+  background: none;
 `
 
 export const VoiceSearchIcon = styled.div`

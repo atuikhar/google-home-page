@@ -1,11 +1,16 @@
 import React from 'react'
-import { Menu, MenuItem } from '@mui/material'
-import ImageList from '@mui/material/ImageList'
-import ImageListItem from '@mui/material/ImageListItem'
+import { Menu } from '@mui/material'
 
-import { Icon, GoogleIcons } from './GoogleAppsStyles'
+import {
+  Icon,
+  GoogleIcons,
+  ListContainer,
+  AppList,
+  Link,
+  Text,
+} from './GoogleAppsStyles'
 
-import { apps } from '../../data'
+import { apps, products } from '../../data'
 
 export const GoogleApps = () => {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -28,7 +33,7 @@ export const GoogleApps = () => {
       >
         <svg className="gb_Oe" focusable="false" viewBox="0 0 24 24">
           <path
-            fill={'#787878'}
+            fill={'#393b40'}
             d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
           ></path>
         </svg>
@@ -47,25 +52,26 @@ export const GoogleApps = () => {
           vertical: 'top',
           horizontal: 'left',
         }}
-        sx={{ marginTop: '35px' }}
+        sx={{ marginTop: '40px' }}
       >
-        <ImageList
-          sx={{
-            width: 250,
-            height: 450,
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
-            justifyItems: 'center',
-          }}
-          cols={3}
-          rowHeight={50}
-        >
+        <ListContainer cols={3} rowHeight={70}>
           {apps.map((a, index) => (
-            <ImageListItem key={index} sx={{ textAlign: 'center' }}>
-              <GoogleIcons src={a.img} alt={a.name} loading="lazy" />
-            </ImageListItem>
+            <AppList key={index}>
+              <Link href={a.link}>
+                <GoogleIcons src={a.img} alt={a.name} loading="lazy" />
+              </Link>
+              <Text>{a.name}</Text>
+            </AppList>
           ))}
-        </ImageList>
+          {products.map((p, index) => (
+            <AppList key={index}>
+              <Link href={p.link}>
+                <GoogleIcons src={p.img} alt={p.name} loading="lazy" />
+              </Link>
+              <Text>{p.name}</Text>
+            </AppList>
+          ))}
+        </ListContainer>
       </Menu>
     </>
   )
