@@ -10,7 +10,7 @@ const Div = styled.div`
   color: ${(props) => props.theme.fontColor};
 `
 const App = () => {
-  const [theme, setTheme] = React.useState('dark')
+  const [theme, setTheme] = React.useState('light')
 
   const toggleTheme = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')

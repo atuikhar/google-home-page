@@ -1,10 +1,19 @@
 import React from 'react'
-import { HeroWrapper, Input } from './HeroStyles'
+import { SearchBox } from 'components/SearchBox/SearchBox'
+import {
+  HeroWrapper,
+  Div,
+  Button,
+  Div1,
+  GoogleLogo,
+  Text,
+  Link,
+} from './HeroStyles'
 
 export const Hero = () => {
   return (
     <HeroWrapper>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <GoogleLogo>
         <svg xmlns="http://www.w3.org/2000/svg" width="272" height="92">
           <path
             fill="#EA4335"
@@ -28,16 +37,44 @@ export const Hero = () => {
             d="M35.29 41.41V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 34.91.36 15.93 16.32.47 35.3.47c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03 0 13.86 10.84 25.03 24.7 25.03 8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65l-22.49.01z"
           />
         </svg>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          marginTop: '30px',
-        }}
-      >
-        <Input type="text" />
-      </div>
+      </GoogleLogo>
+      <Div>
+        <SearchBox />
+      </Div>
+      <Div1>
+        <Button>Google Search</Button>
+        <Button>I'm Feeling Lucky</Button>
+      </Div1>
+      <Div1>
+        <Text>Google offered in: </Text>
+        <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=hi&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBA">
+          <Text>हिन्दी</Text>
+        </Link>
+        <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=bn&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBE">
+          <Text>বাংলা</Text>
+        </Link>
+        <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=te&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBI">
+          <Text>తెలుగు</Text>
+        </Link>
+        <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=mr&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBM">
+          <Text>मराठी</Text>
+        </Link>
+        <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=ta&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBQ">
+          <Text>தமிழ்</Text>
+        </Link>
+        <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=gu&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBU">
+          <Text>ગુજરાતી</Text>
+        </Link>
+        <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=kn&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBY">
+          <Text>ಕನ್ನಡ</Text>
+        </Link>
+        <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=ml&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBc">
+          <Text>മലയാളം</Text>
+        </Link>
+        <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=pa&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBg">
+          <Text>ਪੰਜਾਬੀ</Text>
+        </Link>
+      </Div1>
     </HeroWrapper>
   )
 }

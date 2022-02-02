@@ -9,16 +9,20 @@ export const Div = styled.div`
 export const LeftNav = styled.div`
   display: flex;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 10px;
 `
 
 export const Text = styled.p`
-  padding-right: 30px;
+  padding-right: 20px;
   cursor: pointer;
+  font-size: 13px;
+  &:hover {
+    text-decoration: underline;
+  }
 `
-export const Icon = styled.span`
-  height: 30px;
-  width: 30px;
-  margin-right: 20px;
-  cursor: pointer;
+export const Link = styled.a`
+  padding-left: 10px;
+  text-decoration: none;
+  color: ${(props) => props.theme.color};
+  }
 `

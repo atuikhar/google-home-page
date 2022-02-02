@@ -7,7 +7,8 @@ export const FooterWrapper = styled.div`
 `
 export const LocationNav = styled.div`
   padding-left: 20px;
-  box-shadow: #bebebe 0px 0px 1px 0px, rgba(27, 31, 35, 0.15) 0px 1px 0px 1px;
+  box-shadow: rgba(9, 30, 66, 0.3) 0px 0px 1px,
+    rgba(9, 30, 66, 0.1) 0px 0px 1px 0px;
 `
 export const AboutNav = styled.div`
   display: flex;
