@@ -8,6 +8,7 @@ import {
   AppList,
   Link,
   Text,
+  Button,
 } from './GoogleAppsStyles'
 
 import { apps, products } from '../../data'
@@ -71,6 +72,9 @@ export const GoogleApps = () => {
               <Text>{p.name}</Text>
             </AppList>
           ))}
+          <Link href="https://about.google/products/">
+            <Button>More...</Button>
+          </Link>
         </ListContainer>
       </Menu>
     </>

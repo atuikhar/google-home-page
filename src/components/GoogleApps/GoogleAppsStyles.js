@@ -35,3 +35,26 @@ export const Text = styled.p`
   text-align: center;
   padding-bottom: 10px;
 `
+
+export const Button = styled.button`
+  border: none;
+  height: 35px;
+  margin: 10px;
+  padding: 10px;
+  background: #f8f9fa;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+  border: 1px solid #4285f4;
+
+  &:focus {
+    border: 1px solid #4285f4;
+    background: #fff;
+  }
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 3px;
+    border: 1px solid #4285f4;
+  }
+`
