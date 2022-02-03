@@ -1,5 +1,7 @@
 import React from 'react'
 import $ from 'jquery'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
+import LightModeIcon from '@mui/icons-material/LightMode'
 
 import {
   FooterWrapper,
@@ -16,7 +18,7 @@ import {
 } from './FooterStyles'
 import { Container } from '@mui/material'
 
-export const Footer = ({ toggleTheme }) => {
+export const Footer = ({ toggleTheme, theme }) => {
   const [country, setCountry] = React.useState('India')
 
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -117,7 +119,16 @@ export const Footer = ({ toggleTheme }) => {
                 </MenuItemList>
               </Link>
               <MenuItemList onClick={toggleTheme}>
-                <LinkText onClick={handleClose}>Dark Theme</LinkText>
+                {theme === 'light' ? (
+                  <LinkText>
+                    DarkMode <DarkModeIcon sx={{ ml: 2 }} />
+                  </LinkText>
+                ) : (
+                  <LinkText>
+                    LightMode
+                    <LightModeIcon sx={{ ml: 2 }} />
+                  </LinkText>
+                )}
               </MenuItemList>
             </MenuWrapper>
           </Div2>

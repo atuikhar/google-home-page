@@ -21,8 +21,8 @@ const App = () => {
         <GlobalStyles />
         <Div>
           <Header />
-          <Hero theme={theme} />
-          <Footer toggleTheme={toggleTheme} />
+          <Hero />
+          <Footer theme={theme} toggleTheme={toggleTheme} />
         </Div>
       </ThemeProvider>
     </>
