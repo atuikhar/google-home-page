@@ -7,9 +7,14 @@ export const FooterWrapper = styled.div`
 `
 export const LocationNav = styled.div`
   padding-left: 20px;
-  box-shadow: #545961 0px 0px 1px, rgba(9, 30, 66, 0.1) 0px 0px 1px 0px;
+  border: none;
+  background: ${(props) => props.theme.background2};
+  box-shadow: ${(props) => props.theme.color};
 `
 export const AboutNav = styled.div`
+  background: ${(props) => props.theme.background2};
+  box-shadow: ${(props) => props.theme.line} 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   display: flex;
   justify-content: space-between;
 `
@@ -17,7 +22,8 @@ export const Text = styled.p`
   font-size: 14px;
   padding: 15px;
   cursor: pointer;
-  color: #545961;
+  color: ${(props) => props.theme.color};
+
   &:hover {
     text-decoration: underline;
   }
@@ -25,7 +31,7 @@ export const Text = styled.p`
 export const Location = styled.p`
   font-size: 14px;
   padding: 15px;
-  color: #545961;
+  color: ${(props) => props.theme.color};
 `
 export const Div = styled.div`
   display: flex;
@@ -41,7 +47,7 @@ export const Link = styled.a`
 
 export const LinkText = styled.p`
   font-size: 14px;
-  color: #545961;
+  color: ${(props) => props.theme.color1};
   padding-top: 10px;
 
   &:hover {

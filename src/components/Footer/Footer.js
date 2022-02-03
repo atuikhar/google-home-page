@@ -115,7 +115,7 @@ export const Footer = ({ toggleTheme }) => {
                 </MenuItem>
               </Link>
               <MenuItem onClick={toggleTheme}>
-                <Text>Dark Theme</Text>
+                <LinkText>Dark Theme</LinkText>
               </MenuItem>
             </Menu>
           </Div2>

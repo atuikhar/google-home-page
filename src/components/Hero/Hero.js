@@ -6,6 +6,7 @@ import {
   Div1,
   GoogleLogo,
   Text,
+  TextBtn,
   Link,
   Wrapper,
   Input,
@@ -103,11 +104,15 @@ export const Hero = () => {
         </Wrapper>
       </Div>
       <Div1>
-        <Button onClick={(e) => handleSubmit(e)}>Google Search</Button>
-        <Button onClick={handleFeelingLucky}>I'm Feeling Lucky</Button>
+        <Button onClick={(e) => handleSubmit(e)}>
+          <TextBtn>Google Search</TextBtn>
+        </Button>
+        <Button onClick={handleFeelingLucky}>
+          <TextBtn>I'm Feeling Lucky</TextBtn>
+        </Button>
       </Div1>
       <Div1>
-        <Text>Google offered in: </Text>
+        <TextBtn>Google offered in: </TextBtn>
         <Link href="https://www.google.co.in/setprefs?sig=0_eQx7deOLBubo2lhAtouT3N0__7w%3D&amp;hl=hi&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwj-roqR2OD1AhWXTmwGHVGFCIAQ2ZgBCBA">
           <Text>हिन्दी</Text>
         </Link>

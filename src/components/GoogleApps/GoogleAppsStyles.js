@@ -1,4 +1,4 @@
-import { ImageList, ImageListItem } from '@mui/material'
+import { ImageList, ImageListItem, Menu } from '@mui/material'
 import styled from 'styled-components'
 
 export const Icon = styled.span`
@@ -31,7 +31,7 @@ export const Link = styled.a`
 `
 export const Text = styled.p`
   font-size: 13px;
-  color: #000;
+
   text-align: center;
   padding-bottom: 10px;
 `
@@ -41,7 +41,7 @@ export const Button = styled.button`
   height: 35px;
   margin: 10px;
   padding: 10px;
-  background: #f8f9fa;
+
   cursor: pointer;
   border-radius: 3px;
   font-size: 14px;
@@ -57,4 +57,8 @@ export const Button = styled.button`
     border-radius: 3px;
     border: 1px solid #4285f4;
   }
+`
+
+export const MenuDropDown = styled(Menu)`
+  margin-top: 40px;
 `

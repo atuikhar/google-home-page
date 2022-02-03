@@ -3,12 +3,20 @@ import { normalize } from 'styled-normalize'
 
 export const lightMode = {
   body: '#fff',
-  fontColor: '#000',
+  color: '#000',
+  color1: '#000',
+  background: '#f8f9fa',
+  background2: '#f2f2f2',
+  line: '#212327',
 }
 
 export const darkMode = {
   body: '#202124',
-  fontColor: '#dedede',
+  color: '#bebebe',
+  background: '#303134',
+  background2: '#171717',
+  color1: '#000',
+  line: '#dadce0',
 }
 
 const GlobalStyles = createGlobalStyle`

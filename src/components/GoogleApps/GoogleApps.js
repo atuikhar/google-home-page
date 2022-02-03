@@ -1,5 +1,4 @@
 import React from 'react'
-import { Menu } from '@mui/material'
 
 import {
   Icon,
@@ -9,6 +8,7 @@ import {
   Link,
   Text,
   Button,
+  MenuDropDown,
 } from './GoogleAppsStyles'
 
 import { apps, products } from '../../data'
@@ -39,7 +39,7 @@ export const GoogleApps = () => {
           ></path>
         </svg>
       </Icon>
-      <Menu
+      <MenuDropDown
         id="menu"
         aria-labelledby="menu-button"
         anchorEl={anchorEl}
@@ -53,7 +53,6 @@ export const GoogleApps = () => {
           vertical: 'top',
           horizontal: 'left',
         }}
-        sx={{ marginTop: '40px' }}
       >
         <ListContainer cols={3} rowHeight={70}>
           {apps.map((a, index) => (
@@ -76,7 +75,7 @@ export const GoogleApps = () => {
             <Button>More...</Button>
           </Link>
         </ListContainer>
-      </Menu>
+      </MenuDropDown>
     </>
   )
 }

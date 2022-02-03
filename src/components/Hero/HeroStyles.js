@@ -29,14 +29,12 @@ export const Button = styled.button`
   height: 35px;
   margin: 10px;
   padding: 10px;
-  background: ${(props) => props.theme.color}
-  // background: #f8f9fa;
+  background: ${(props) => props.theme.background};
   cursor: pointer;
   border-radius: 3px;
-  font-size: 14px;
   &:focus {
     border: 1px solid #4285f4;
-    // background: #fff;
+    background: #fff;
   }
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -44,11 +42,18 @@ export const Button = styled.button`
     border-radius: 3px;
   }
 `
+export const TextBtn = styled.p`
+  color: ${(props) => props.theme.color};
+
+  font-size: 13px;
+`
 export const Text = styled.p`
+  color: #1a0dab;
   font-size: 13px;
 `
 export const Link = styled.a`
   padding-left: 10px;
+
   text-decoration: none;
 `
 
@@ -79,7 +84,7 @@ export const Input = styled.input`
   border: none;
   outline: none;
   padding-left: 10px;
-  color: #545961;
+  color: ${(props) => props.theme.color};
   background: none;
 `
 

@@ -16,6 +16,8 @@ export const Text = styled.p`
   padding-right: 20px;
   cursor: pointer;
   font-size: 13px;
+  color: ${(props) => props.theme.color};
+
   &:hover {
     text-decoration: underline;
   }
@@ -23,7 +25,6 @@ export const Text = styled.p`
 export const Link = styled.a`
   padding-left: 10px;
   text-decoration: none;
-  color: #545961;
   }
 `
 
