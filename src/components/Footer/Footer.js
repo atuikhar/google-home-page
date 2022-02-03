@@ -11,8 +11,10 @@ import {
   Location,
   Link,
   LinkText,
+  MenuItemList,
+  MenuWrapper,
 } from './FooterStyles'
-import { Container, Menu, MenuItem } from '@mui/material'
+import { Container } from '@mui/material'
 
 export const Footer = ({ toggleTheme }) => {
   const [country, setCountry] = React.useState('India')
@@ -68,14 +70,14 @@ export const Footer = ({ toggleTheme }) => {
             </Link>
             <Text
               id="settings-button"
-              aria-controls={open ? 'settings-menu' : undefined}
+              aria-controls={open ? 'settings-MenuWrapper' : undefined}
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
               onClick={handleClick}
             >
               Settings
             </Text>
-            <Menu
+            <MenuWrapper
               id="settings-menu"
               anchorEl={anchorEl}
               open={open}
@@ -85,39 +87,39 @@ export const Footer = ({ toggleTheme }) => {
               }}
             >
               <Link href="https://www.google.com/preferences?hl=en-IN&fg=1">
-                <MenuItem>
+                <MenuItemList>
                   <LinkText>Search settings</LinkText>
-                </MenuItem>
+                </MenuItemList>
               </Link>
               <Link href="https://www.google.com/advanced_search?hl=en-IN&fg=1">
-                <MenuItem>
+                <MenuItemList>
                   <LinkText>Advance search</LinkText>
-                </MenuItem>
+                </MenuItemList>
               </Link>
               <Link href="https://myaccount.google.com/yourdata/search?utm_source=googlemenu&fg=1&pli=1">
-                <MenuItem>
+                <MenuItemList>
                   <LinkText>Your data in Search</LinkText>
-                </MenuItem>
+                </MenuItemList>
               </Link>
               <Link href="https://myactivity.google.com/product/search?utm_source=google&hl=en-IN&fg=1">
-                <MenuItem>
+                <MenuItemList>
                   <LinkText>Search history</LinkText>
-                </MenuItem>
+                </MenuItemList>
               </Link>
               <Link href="https://support.google.com/websearch/?visit_id=637794181238808827-3228998082&hl=en-IN&rd=2#topic=3378866">
-                <MenuItem>
+                <MenuItemList>
                   <LinkText>Search help</LinkText>
-                </MenuItem>
+                </MenuItemList>
               </Link>
               <Link href="https://www.google.com/tools/feedback/intl/en/">
-                <MenuItem>
+                <MenuItemList>
                   <LinkText>Send feedback</LinkText>
-                </MenuItem>
+                </MenuItemList>
               </Link>
-              <MenuItem onClick={toggleTheme}>
-                <LinkText>Dark Theme</LinkText>
-              </MenuItem>
-            </Menu>
+              <MenuItemList onClick={toggleTheme}>
+                <LinkText onClick={handleClose}>Dark Theme</LinkText>
+              </MenuItemList>
+            </MenuWrapper>
           </Div2>
         </Container>
       </AboutNav>

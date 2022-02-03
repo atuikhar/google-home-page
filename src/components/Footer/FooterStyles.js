@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Menu, MenuItem } from '@mui/material'
 
 export const FooterWrapper = styled.div`
   position: absolute;
@@ -17,6 +18,9 @@ export const AboutNav = styled.div`
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 470px) {
+    display: block;
+  }
 `
 export const Text = styled.p`
   font-size: 14px;
@@ -27,18 +31,50 @@ export const Text = styled.p`
   &:hover {
     text-decoration: underline;
   }
+
+  @media screen and (max-width: 800px) {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 5px;
+    padding: 5px;
+  }
 `
 export const Location = styled.p`
   font-size: 14px;
   padding: 15px;
   color: ${(props) => props.theme.color};
+  @media and screen (max-width: 470px) {
+    font-size: 7px;
+    padding: 7px;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 5px;
+    padding: 5px;
+  }
+  @media screen and (max-width: 130px) {
+    font-size: 1px;
+    padding: 0px;
+  }
 `
 export const Div = styled.div`
   display: flex;
+
+  @media only screen and (max-width: 320px) {
+    display: flex;
+    justify-content: center;
+  }
 `
 export const Div2 = styled.div`
   display: flex;
   justify-content: end;
+
+  @media only screen and (max-width: 320px) {
+    display: flex;
+    justify-content: center;
+  }
 `
 
 export const Link = styled.a`
@@ -52,5 +88,23 @@ export const LinkText = styled.p`
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 320px) {
+    font-size: 8px;
+    padding: 0px;
+  }
+`
+
+export const MenuItemList = styled(MenuItem)`
+  padding: 0px;
+  margin: 0px;
+`
+
+export const MenuWrapper = styled(Menu)`
+  height: 500px;
+
+  @media only screen and (max-width: 320px) {
+    height: 390px;
   }
 `

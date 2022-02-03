@@ -8,6 +8,7 @@ export const lightMode = {
   background: '#f8f9fa',
   background2: '#f2f2f2',
   line: '#212327',
+  linkColor: '#1a0dab',
 }
 
 export const darkMode = {
@@ -17,6 +18,7 @@ export const darkMode = {
   background2: '#171717',
   color1: '#000',
   line: '#dadce0',
+  linkColor: '#8ab4f8',
 }
 
 const GlobalStyles = createGlobalStyle`

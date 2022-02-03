@@ -21,10 +21,17 @@ export const Text = styled.p`
   &:hover {
     text-decoration: underline;
   }
+  @media only screen and (max-width: 320px) {
+    font-size: 7px;
+    padding-right: 5px;
+  }
 `
 export const Link = styled.a`
   padding-left: 10px;
   text-decoration: none;
+  }
+  @media only screen and (max-width: 320px) {
+    padding-left: 2px;
   }
 `
 
@@ -36,4 +43,13 @@ export const Button = styled.button`
   min-width: 96px;
   margin-right: 10px;
   color: #fff;
+
+  @media only screen and (max-width: 320px) {
+    min-width: 15px;
+    height: 10px;
+    font-size: 7px;
+    padding-top: 4px;
+    margin-right: 2px;
+    border-radius: 2px;
+  }
 `
